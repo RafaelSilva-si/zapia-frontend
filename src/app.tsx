@@ -1,6 +1,12 @@
 import { useState } from 'react'
-import './app.css'
+import styled from 'styled-components'
 
+const Button = styled.button`
+    background: palevioletred;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+`
 export function App () {
   const [count, setCount] = useState(0)
 
@@ -9,9 +15,9 @@ export function App () {
       <header className='App-header'>
         <p>Hello Vite + React!</p>
         <p>
-          <button type='button' onClick={() => setCount((count) => count + 1)}>
+          <Button type='button' onClick={() => setCount((count) => count + 1)}>
             count is: {count}
-          </button>
+          </Button>
         </p>
         <p>
           Edit <code>App.tsx</code> and save to test HMR updates.
